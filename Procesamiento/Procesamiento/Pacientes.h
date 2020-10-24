@@ -1,6 +1,7 @@
 #pragma once
-
+#include<string>
 #include <iostream>
+#include<sstream>
 
 using namespace std;
 
@@ -15,7 +16,7 @@ private:
 public:
 
     Pacientes(string, string, string, string, string);
-
+    string toString();
     string getNombre() ;
 
 

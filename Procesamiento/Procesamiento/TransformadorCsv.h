@@ -13,7 +13,7 @@ public:
 	virtual ~ITransformadorCsv() = default;
 };
 
-class TransformadorCsvPersona : public ITransformadorCsv<Pacientes*>
+class TransformadorCsvPaciente : public ITransformadorCsv<Pacientes*>
 {
 public:
 	vector<string>* toStringVector(Pacientes* elemento) override
