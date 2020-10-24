@@ -7,19 +7,19 @@ using namespace std;
 class Pacientes
 {
 private:
-	double id;
+	string id;
     string nombre;
 	string telefono;
 	string correo;
 	string secuencia;
 public:
 
-    Pacientes(double, string, string, string, string);
+    Pacientes(string, string, string, string, string);
 
     string getNombre() ;
 
 
-    double getId() ;
+    string getId() ;
 
 
     string getTelefono() ;

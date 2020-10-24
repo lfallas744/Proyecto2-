@@ -1,6 +1,6 @@
 #include "Pacientes.h"
 
-Pacientes::Pacientes(double id, string nom, string tel, string correo, string secuencia)
+Pacientes::Pacientes(string id, string nom, string tel, string correo, string secuencia)
 {
     this->id = id;
     this->nombre = nom;
@@ -16,7 +16,7 @@ string Pacientes::getNombre()
 
 
 
-double Pacientes::getId() 
+string Pacientes::getId() 
 {
     return id;
 }

@@ -144,8 +144,13 @@
     <ClCompile Include="Pacientes.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CsvReader.h" />
+    <ClInclude Include="CsvWriter.h" />
     <ClInclude Include="Enfermedades.h" />
+    <ClInclude Include="IReader.h" />
+    <ClInclude Include="IWriter.h" />
     <ClInclude Include="Pacientes.h" />
+    <ClInclude Include="TransformadorCsv.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
