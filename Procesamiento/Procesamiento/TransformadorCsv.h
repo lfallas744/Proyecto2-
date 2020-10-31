@@ -2,6 +2,7 @@
 #include<vector>
 #include<string>
 #include "Pacientes.h"
+#include"Enfermedades.h"
 using namespace std;
 
 template<class T>
@@ -30,5 +31,22 @@ public:
 	Pacientes* fromStringVector(vector<string>* vector) override
 	{
 		return new Pacientes(vector->at(0), vector->at(1), vector->at(2), vector->at(3), vector->at(4));
+	}
+};
+
+class TransformadorCsvEnfermedades : public ITransformadorCsv<Enfermedades*>
+{
+public:
+	vector<string>* toStringVector(Enfermedades* elemento) override
+	{
+		vector<string>* campos = new vector<string>();
+		campos->push_back(elemento->getNombre());
+		campos->push_back(elemento->getSecuencia());
+		return campos;
+	}
+
+	Enfermedades* fromStringVector(vector<string>* vector) override
+	{
+		return new Enfermedades(vector->at(0), vector->at(1));
 	}
 };

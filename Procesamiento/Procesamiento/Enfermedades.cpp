@@ -16,3 +16,13 @@ string Enfermedades::getSecuencia()
     return secuencia;
 }
 
+string Enfermedades::toString() {
+    stringstream s;
+    s << "Nombre: " << this->getNombre() << endl;
+    s << "Secuencia: " << this->getSecuencia() << endl;
+    return s.str();
+}
+
+Enfermedades* Enfermedades::buscaEnfermedad(string sec) {
+    return nullptr;
+}

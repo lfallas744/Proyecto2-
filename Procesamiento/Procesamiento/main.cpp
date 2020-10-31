@@ -20,15 +20,27 @@ int main() {
 	delete persona3;
 	delete writer;*/
 
-	IReader<Pacientes*>* reader = new CsvReader<Pacientes*>("pacientes.csv", new TransformadorCsvPaciente());
-	vector<Pacientes*>* paciente = reader->leerTodos();
+	IReader<Enfermedades*>* readerEnfermedades = new CsvReader<Enfermedades*>("enfermedades.csv", new TransformadorCsvEnfermedades());
+	vector<Enfermedades*>* enfermedad = readerEnfermedades->leerTodos();
+
+	for (auto& enfermedades : *enfermedad)
+	{
+		cout << enfermedades->toString() << endl;
+	}
+
+	IReader<Pacientes*>* readerPacientes = new CsvReader<Pacientes*>("pacientes.csv", new TransformadorCsvPaciente());
+	vector<Pacientes*>* paciente = readerPacientes->leerTodos();
 
 	for (auto& pacientes : *paciente)
 	{
 		cout << pacientes->toString() << endl;
 	}
 
+	
+
+	delete enfermedad;
+	delete readerEnfermedades;
 	delete paciente;
-	delete reader;
+	delete readerPacientes;
 	return 0;
 }
